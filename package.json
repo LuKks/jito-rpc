@@ -1,0 +1,31 @@
+{
+  "name": "jito-rpc",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "files": [],
+  "scripts": {
+    "test": "standard && brittle test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukks/jito-rpc.git"
+  },
+  "author": "Lucas Barrena (LuKks)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lukks/jito-rpc/issues"
+  },
+  "homepage": "https://github.com/lukks/jito-rpc#readme",
+  "devDependencies": {
+    "@solana/web3.js": "^1.98.0",
+    "brittle": "^3.3.2",
+    "bs58": "^6.0.0",
+    "dotenv": "^16.4.7",
+    "like-solana": "^1.0.0",
+    "standard": "^17.1.0"
+  },
+  "dependencies": {
+    "like-fetch": "^2.3.2"
+  }
+}
