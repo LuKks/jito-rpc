@@ -1,7 +1,7 @@
 {
   "name": "jito-rpc",
   "version": "0.0.0",
-  "description": "",
+  "description": "Jito RPC provides MEV protection, and revert protection",
   "main": "index.js",
   "files": [],
   "scripts": {
