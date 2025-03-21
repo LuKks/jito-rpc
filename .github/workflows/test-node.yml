@@ -21,3 +21,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm test
+      env:
+        WALLET_SECRET_KEY: ${{ secrets.WALLET_SECRET_KEY }}
