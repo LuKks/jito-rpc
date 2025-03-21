@@ -1,5 +1,5 @@
 const test = require('brittle')
-const { Connection, PublicKey, Transaction, SystemProgram, Keypair, LAMPORTS_PER_SOL } = require('@solana/web3.js')
+const { PublicKey, Transaction, SystemProgram, Keypair, LAMPORTS_PER_SOL } = require('@solana/web3.js')
 const dotenv = require('dotenv')
 const { default: bs58 } = require('bs58')
 const Solana = require('like-solana')
@@ -20,7 +20,7 @@ test('basic', async function (t) {
       toPubkey: new PublicKey(randomTipAccount),
       lamports: 0.0001 * LAMPORTS_PER_SOL
     })
-  );
+  )
 
   const solana = new Solana()
   const latest = await solana.request('getLatestBlockhash')
@@ -41,5 +41,9 @@ test('basic', async function (t) {
 
   const bundle = await jito.getBundleStatuses(bundleId)
 
-  console.log(bundle)
+  t.is(bundle.bundle_id, bundleId)
+  t.is(bundle.transactions.length, 1)
+  t.ok(bundle.slot)
+  t.is(bundle.confirmation_status, 'confirmed')
+  t.is(bundle.err.Ok, null)
 })
