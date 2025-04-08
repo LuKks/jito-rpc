@@ -26,7 +26,7 @@ module.exports = class Jito {
   }
 
   static async send (tx, opts = {}) {
-    const jito = new this({ url: opts.url })
+    const jito = new this({ url: opts.url, agent: opts.agent })
 
     if (Array.isArray(tx)) {
       return jito.sendBundle(tx)
